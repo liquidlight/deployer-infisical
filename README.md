@@ -12,12 +12,14 @@
 
 Images are published to the GitHub Container Registry for `linux/amd64` and `linux/arm64`. GitHub Actions rebuilds them on every push to `main` and weekly, so they pick up new Deployer releases and Infisical CLI versions.
 
+See [container images](https://github.com/liquidlight/deployer-infisical/pkgs/container/deployer-infisical) for the details.
+
 ## Usage
 
 ```yaml
 .deploy:deployer:
   image:
-    name: ghcr.io/<owner>/infisical-deployer-docker:v7
+    name: ghcr.io/liquidlight/deployer-infisical:v7
   before_script:
     # ...
     - |
